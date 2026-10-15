@@ -1,38 +1,76 @@
-# gamevault
+# GAMEUDL — Catàleg de videojocs
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplicació web desenvolupada amb Vue 3 per consultar un catàleg de videojocs. Les dades es recuperen de Cloud Firestore i es mostren mitjançant components reutilitzables.
 
-## Recommended IDE Setup
+## Tecnologies
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3
+- Vite
+- Vue Router
+- Firebase Cloud Firestore
+- Firebase Hosting
 
-## Recommended Browser Setup
+## Funcionalitats
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Pàgina d'inici.
+- Catàleg de videojocs carregat des de Firestore.
+- Pàgina informativa sobre el projecte.
+- Components reutilitzables per mostrar els videojocs.
+- Navegació entre pàgines amb Vue Router.
+- Gestió dels estats de càrrega, error i catàleg buit.
 
-## Customize configuration
+## Rutes
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+| Ruta | Descripció |
+|---|---|
+| `/` | Pàgina d'inici |
+| `/catalogo` | Catàleg de videojocs |
+| `/acerca-de` | Informació del projecte |
 
-## Project Setup
+## Instal·lació i execució local
 
-```sh
-npm install
-```
+Cal tenir Node.js i npm instal·lats.
 
-### Compile and Hot-Reload for Development
+1. Clonar el repositori:
 
-```sh
-npm run dev
-```
+   ```bash
+   git clone https://github.com/kilian-k3/gameudl-vue.git
+   ```
 
-### Compile and Minify for Production
+2. Entrar a la carpeta:
 
-```sh
-npm run build
-```
+   ```bash
+   cd gameudl-vue
+   ```
+
+3. Instal·lar les dependències:
+
+   ```bash
+   npm install
+   ```
+
+4. Iniciar el servidor de desenvolupament:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Generar la versió de producció:
+
+   ```bash
+   npm run build
+   ```
+
+## Base de dades
+
+Les dades del catàleg es llegeixen des de la col·lecció `videojocs` de Cloud Firestore. Les regles de seguretat del projecte permeten consultar els documents d'aquesta col·lecció i bloquegen les escriptures.
+
+## Desplegament
+
+Aplicació publicada amb Firebase Hosting:
+
+https://gameudl-catalogo.web.app
+
+## Repositori
+
+https://github.com/kilian-k3/gameudl-vue
